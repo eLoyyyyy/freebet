@@ -1,0 +1,120 @@
+.notify-list
+{
+	overflow:hidden;
+	position:relative;
+}
+.widget-notifications{
+	width:300px;
+}
+.widget-notifications .notifications
+{
+	position:relative;
+	padding:7px 12px;
+}
+.widget-notifications .notifications+.notifications
+{
+	border-top:1px solid #ddd;
+}
+.widget-notifications .notification-ago, 
+.widget-notifications .notification-description,
+.widget-notifications .notification-title
+{
+	font-size:11px;
+	margin-right:35px;
+	display:block;
+}
+.widget-notifications .notification-title
+{
+	font-weight:700;
+	padding-bottom:1px;
+}
+.widget-notifications .notification-description
+{
+	color:#777;
+}
+.widget-notifications .notification-ago
+{
+	font-style:italic;
+	color:#bbb;
+}
+.widget-notifications .notification-icon
+{
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -13px 12px 0 0;
+    font-size: 14px;
+}
+.widget-notifications .notification-link,
+.widget-messages-alt .messages-link
+{
+    border-top: 1px solid #DDDDDD;
+	/*border-bottom:1px solid #E4E4E4;*/
+	background:#F6F6F6;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    height: auto !important;
+    line-height: 18px !important;
+    text-decoration: none;
+    padding: 8px 0 !important;
+    color: #999;
+    font-weight: 700;
+}
+.widget-messages-alt .message-description,
+.widget-messages-alt .message-description a,
+.widget-messages-alt .message-subject ,
+.widget-messages-alt .message-subject a
+{
+	line-height:17px !important;
+}
+
+.widget-messages-alt .message-list
+{
+	position:relative;
+	overflow:hidden;
+}
+.widget-messages-alt .message
+{
+	position:relative;
+	padding:10px 12px;
+}
+.widget-messages-alt .message-avatar
+{
+	display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border-radius: 999999px;
+    top: 50%;
+    margin-top: -16px;
+    left: 12px;
+}
+.widget-messages-alt .message-subject
+{
+	display:block;
+	padding-left:42px;
+	margin-bottom:2px;
+	width:100%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	text-decoration:none;
+}
+.widget-messages-alt .message-description
+{
+	display: block;
+    padding-left: 42px;
+    font-size: 11px;
+    color: #aaa;
+    height: auto!important;
+}
+.widget-messages-alt .message+.message
+{
+	border-top:1px solid #ddd;
+}
