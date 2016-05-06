@@ -1,0 +1,15 @@
+[06-May-2016 08:10:01 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:10:41 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:10:59 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:11:07 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:11:18 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:12:09 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:12:31 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:12:47 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:12:58 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:12:59 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:13:18 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:13:28 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:13:31 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:13:34 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
+[06-May-2016 08:13:38 GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/joe14freebetq/public_html/system/includes/connection.php on line 47
