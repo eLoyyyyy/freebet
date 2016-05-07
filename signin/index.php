@@ -33,11 +33,11 @@ if(!isset($_SESSION['account_id'])){
 	</head>
 	<body>
 		<div class="loginmodal-container">
-			<h1>Login to Your Account</h1><br>
-			<input type="text" name="user" class="form-control input-lg form-signin" id="freebet_email" onkeypress="press_enter(event,'signinBtn')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="email" data-field="freebet_email" placeholder="Email Address"  placeholder="Username" >
-			<input type="password" name="pass" class="form-control input-lg form-signin" id="password_id" onkeypress="press_enter(event,'signinBtn')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="password_id" placeholder="Password">
+			<h1>&#3648;&#3586;&#3657;&#3634;&#3626;&#3641;&#3656;&#3619;&#3632;&#3610;&#3610;&#3610;&#3633;&#3597;&#3594;&#3637;&#3586;&#3629;&#3591;&#3588;&#3640;&#3603;</h1><br>
+			<input type="text" name="user" class="form-control input-lg form-signin" id="freebet_email" onkeypress="press_enter(event,'signinBtn')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="email" data-field="freebet_email" placeholder="&#3629;&#3637;&#3648;&#3617;&#3621;&#3660;"  placeholder="Username" >
+			<input type="password" name="pass" class="form-control input-lg form-signin" id="password_id" onkeypress="press_enter(event,'signinBtn')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="password_id" placeholder="&#3619;&#3627;&#3633;&#3626;&#3612;&#3656;&#3634;&#3609;">
 			<!--<input type="submit" name="login" onclick="loginAlert()" class="login loginmodal-submit" value="Login">-->
-			<button class="login loginmodal-submit" id="signinBtn">Submit</button>
+			<button class="login loginmodal-submit" id="signinBtn">&#3648;&#3586;&#3657;&#3634;&#3626;&#3641;&#3656;&#3619;&#3632;&#3610;&#3610;</button>
 		</div>
 		<script type="text/javascript" src="<?php echo $domain;?>js/ajax/page/login/login.js"></script>
 	</body>

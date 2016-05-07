@@ -32,7 +32,7 @@ if(isset($_SESSION['account_id']) && strlen($_SESSION['account_id'])>0)
 		else
 		{
 		?>
-			<html>
+			<html lang="en-th">
 				<head>
 					<?php
 					if(isset($_GET['page']) && strlen($_GET['page'])>0)

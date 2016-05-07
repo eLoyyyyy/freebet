@@ -13,18 +13,17 @@
 					<th data-column-id="entries_id" data-width="75px">NO.ID</th>
 					<th data-width="190px" data-column-id="userid">USER ID</th>
 					<th data-column-id="facebook">FACEBOOK</th>
-					<th data-column-id="name">Name</th>
-					<th data-column-id="ipv4">IP Address</th>
-					<th data-column-id="date_submitted">DATE</th>
-					<th data-column-id="status">STATUS</th>
-					<th data-column-id="commands" data-formatter="commands" data-sortable="false">Action</th>
+					<th data-column-id="name" data-width="350px">Name</th>
+					<th data-column-id="ipv4" data-width="150px">IP Address</th>
+					<th data-column-id="date_submitted" data-width="240px">DATE</th>
+					<th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="100px">Action</th>
 				</tr>
 			</thead>
 			<tbody id="body">
 				
 			</tbody>
 		</table>
-		<a href="page/pending/output.php">Export</a>
+		<div class="pull-right"><a href="page/pending/output.php" class="btn btn-default"><i class="fa fa-download"> Export</i></a></div>
 	</div>
 </div>
 <!--<script src="<?php echo $main_url;?>:3000/socket.io/socket.io.js"></script>-->

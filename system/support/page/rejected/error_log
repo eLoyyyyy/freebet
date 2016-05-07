@@ -1,0 +1,3 @@
+[06-May-2016 06:00:26 GMT] PHP Notice:  Undefined index: reason_type in /home/joe14freebetq/public_html/system/support/page/rejected/data.php on line 77
+[06-May-2016 06:00:52 GMT] PHP Notice:  Undefined index: reason_type in /home/joe14freebetq/public_html/system/support/page/rejected/data.php on line 77
+[06-May-2016 06:02:06 GMT] PHP Notice:  Undefined index: account_cs in /home/joe14freebetq/public_html/system/support/page/rejected/data.php on line 75

@@ -11,19 +11,19 @@ $tempRow = [];
 
 $sql_1 = "
 		SELECT
-		fb_form_data.entries_id as entries_id,
-		fb_form_data.user_id as user_id,
-		fb_form_data.user_name as user_name,
-		fb_form_data.facebook_url as facebook_url,
-		INET_NTOA(fb_form_data.ip_address) as ip_address,
-		fb_form_data.message as message,
-		fb_form_data.app_status as app_status,
-		fb_form_data.account_id as account_id,
-		fb_form_data.timestamp as timestamp
+		fb_fd.entries_id as entries_id,
+		fb_fd.user_id as user_id,
+		fb_fd.user_name as user_name,
+		fb_fd.facebook_url as facebook_url,
+		INET_NTOA(fb_fd.ip_address) as ip_address,
+		fb_fd.message as message,
+		fb_fd.app_status as app_status,
+		(SELECT fb_tbl.first_name FROM freebet_tbl_accounts as fb_tbl WHERE fb_tbl.id = fb_fd.account_id) as account_cs,
+		fb_fd.timestamp as timestamp
 		FROM
-		fb_form_data
+		fb_form_data as fb_fd
 		WHERE
-		fb_form_data.app_status = '1'
+		fb_fd.app_status = '1'
 	";
 if($query_1 = sys_mysql_query($conn,$sql_1)){
 	$total_account = sys_mysql_num_rows($query_1);
@@ -39,12 +39,14 @@ if($query_1 = sys_mysql_query($conn,$sql_1)){
 				echo "<td>" . $data_1['app_status'] . "</td>";
 				echo "<td></td>";
 			echo "</tr>"; */
+			$timestamp = $data_1['timestamp'];
 			$tempRow = array( "entries_id" => $data_1['entries_id'],
 							  "userid" => $data_1['user_id'],
 							  "facebook" => $data_1['facebook_url'],
 							  "name" => $data_1['user_name'],
 							  "ipv4" => $data_1['ip_address'],
-							  "date_submitted" => $data_1['timestamp'] );
+							  "cs" => $data_1['account_cs'],
+							  "date_submitted" => bangkokConverter($timestamp) );
 			$row[] = $tempRow;
 		}
 	}else{

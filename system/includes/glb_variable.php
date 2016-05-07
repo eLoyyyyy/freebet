@@ -3,7 +3,7 @@
 *System Connection to url
 *Minified Files
 */
-$system_test = 1;
+$system_test = 0;
 $minified_js = 0;
 $minified_css = 0;
 $header_status = 0;
@@ -65,7 +65,7 @@ $mysql_real_escape_status = 1;
 
 /*Time Stamp Convertor*/
 function timeStampConvertor($elem,$type){
-	$h = "8";
+	$h = "7";
 	$hm = $h * 60;
 	$ms = $hm * 60;
 	
@@ -75,5 +75,9 @@ function timeStampConvertor($elem,$type){
 	else if($type == 2){
 		return gmdate('M d Y',$elem+($ms));
 	}
+}
+
+function bangkokConverter($timestampUnique){
+	return date('M d Y h:i:s A', strtotime($timestampUnique)+54000); //25200 (+8h)
 }
 ?>

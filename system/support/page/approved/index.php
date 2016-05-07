@@ -13,17 +13,18 @@
 					<th data-column-id="entries_id" data-width="75px" data-type="numeric">NO.ID</th>
 					<th data-width="190px" data-column-id="userid">USER ID</th>
 					<th data-column-id="facebook">FACEBOOK</th>
-					<th data-column-id="name">Name</th>
-					<th data-column-id="ipv4">IP Address</th>
-					<th data-column-id="date_submitted">DATE</th>
-					<th data-column-id="commands" data-formatter="commands" data-sortable="false">Action</th>
+					<th data-column-id="name" data-width="375px">Name</th>
+					<th data-column-id="ipv4" data-width="150px">IP Address</th>
+					<th data-column-id="cs" data-width="150px">C.S.</th>
+					<th data-column-id="date_submitted" data-width="250px">DATE</th>
+					<th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="100px">Action</th>
 				</tr>
 			</thead>
 			<tbody id="body">
 				
 			</tbody>
 		</table>
-		<a href="page/approved/output.php">Export</a>
+		<div class="pull-right"><a href="page/approved/output.php" class="btn btn-default"><i class="fa fa-download"> Export</i></a></div>
 	</div>
 </div>
 <script src="<?php echo $domain;?>js/ajax/page/support/approved/approved.js"></script>

@@ -39,12 +39,13 @@ if($query_1 = sys_mysql_query($conn,$sql_1)){
 				echo "<td>" . $data_1['app_status'] . "</td>";
 				echo "<td></td>";
 			echo "</tr>"; */
+			$timestamp = $data_1['timestamp'];
 			$tempRow = array( "entries_id" => $data_1['entries_id'],
 							  "userid" => $data_1['user_id'],
 							  "facebook" => $data_1['facebook_url'],
 							  "name" => $data_1['user_name'],
 							  "ipv4" => $data_1['ip_address'],
-							  "date_submitted" => $data_1['timestamp'] );
+							  "date_submitted" => bangkokConverter($timestamp) );
 			$row[] = $tempRow;
 		}
 	}else{
