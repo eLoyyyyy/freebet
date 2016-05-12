@@ -1,4 +1,6 @@
 <?php
+	phpinfo();
+	die();
 	session_start();
 	include '../system/includes/glb_variable.php';
 	include '../system/includes/connection.php';
