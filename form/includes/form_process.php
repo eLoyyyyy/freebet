@@ -49,7 +49,7 @@ if($total_count == 0){
 			'" . $userid . "', 
 			'" . $username . "', 
 			'" . $facebook_url . "', 
-			'QQ101', 
+			'QQ188', 
 			" . ip2long($_SERVER['REMOTE_ADDR']) . ", 
 			null,
 			null, 

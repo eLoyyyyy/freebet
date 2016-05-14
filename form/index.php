@@ -1,6 +1,4 @@
 <?php
-	phpinfo();
-	die();
 	session_start();
 	include '../system/includes/glb_variable.php';
 	include '../system/includes/connection.php';
@@ -109,12 +107,14 @@
 
 	if (isset($_GET['success']) && $_GET['success'] == true) {
 ?>
-	<div class="page-heading">
-		<h3>&#3586;&#3629;&#3586;&#3629;&#3610;&#3588;&#3640;&#3603;</h3>
+	<div>
+		<div class="page-heading text-center">
+			<h3>khi b&#7841;n &#273;&#259;ng k&#253; th&#224;nh c&#244;ng</h3>
+		</div>
 	</div>
 <?php
 	} else {
-		$block_it = 0;
+		$block_it = 1;
 		$sql_3 = "
 				SELECT 
 					* 
@@ -129,41 +129,29 @@
 ?>
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="loginmodal-container">
-						<h1>
-							<!-- Registration Form -->
-							&#3649;&#3610;&#3610;&#3615;&#3629;&#3619;&#3660;&#3617;&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;
-						</h1>
-						<br>
+						<h1>M&#7851;u &#272;&#259;ng K&#253;</h1><br>
 					<!-- <form class="form-horizontal" id="claim-form" method="POST" action="index.php"> action="index.php"-->
 						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-3 control-label">
-								<!-- User ID : English
-									ยูเซอร์ไอดี : Thailand
-								-->
-								&#3618;&#3641;&#3648;&#3595;&#3629;&#3619;&#3660;&#3652;&#3629;&#3604;&#3637;
-							</label>
+							<label for="inputEmail3" class="col-sm-3 control-label">T&#234;n T&#224;i kho&#7843;n</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="userid" name="userid" pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" placeholder="&#3618;&#3641;&#3648;&#3595;&#3629;&#3619;&#3660;&#3652;&#3629;&#3604;&#3637;" required>
+								<input type="text" name="userid" class="form-control input-lg form-reg" id="userid" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="userid" placeholder="T&#234;n T&#224;i kho&#7843;n">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-3 control-label">
-								<!-- Nama di Facebook : Indonesian -->
-								&#3594;&#3639;&#3656;&#3629;&#3607;&#3637;&#3656;&#3651;&#3594;&#3657;&#3651;&#3609;&#3648;&#3615;&#3626;&#3610;&#3640;&#3658;&#3588;
-							</label>
+							<label for="inputPassword3" class="col-sm-3 control-label">T&#234;n T&#224;i kho&#7843;n Facebook</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="username" name="username" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$" placeholder="&#3594;&#3639;&#3656;&#3629;&#3586;&#3629;&#3591;&#3588;&#3640;&#3603;" required>
+								<input type="text" name="username" class="form-control input-lg form-reg" id="username" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="username" placeholder="T&#234;n &#273;&#7847;y &#273;&#7911;">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputPassword4" class="col-sm-3 control-label">URL &#3648;&#3615;&#3626;&#3610;&#3640;&#3658;&#3588;&#3586;&#3629;&#3591;&#3588;&#3640;&#3603;</label>
+							<label for="inputPassword4" class="col-sm-3 control-label">Link Facebook</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="facebook_url" name="facebook_url" pattern="(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)?" placeholder="URL &#3648;&#3615;&#3626;&#3610;&#3640;&#3658;&#3588;&#3586;&#3629;&#3591;&#3588;&#3640;&#3603;" required>
+								<input type="text" name="facebook_url" class="form-control input-lg form-reg" id="facebook_url" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="facebook_url" placeholder="Link Facebook">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
-								<button type="submit" class="btn btn-default" id="claim_form">&#3621;&#3591;&#3607;&#3632;&#3648;&#3610;&#3637;&#3618;&#3609;</button>
+								<button type="submit" class="btn btn-default" id="registration">&#272;&#259;ng nh&#7853;p</button>
 							</div>
 						</div>
 					<!--</form>-->
@@ -171,7 +159,7 @@
 			</div>
 <?php } else { ?>
 		<div class="page-heading">
-			<h3>&#3648;&#3604;&#3636;&#3617;&#3614;&#3633;&#3609;&#3615;&#3619;&#3637;&#3607;&#3637;&#3656; QQ101 &#3626;&#3634;&#3617;&#3634;&#3619;&#3606;&#3586;&#3629;&#3619;&#3633;&#3610;&#3652;&#3604;&#3657;&#3648;&#3614;&#3637;&#3618;&#3591;&#3588;&#3619;&#3633;&#3657;&#3591;&#3648;&#3604;&#3637;&#3618;&#3623;&#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; &#3648;&#3619;&#3634;&#3627;&#3623;&#3633;&#3591;&#3648;&#3611;&#3655;&#3609;&#3629;&#3618;&#3656;&#3634;&#3591;&#3618;&#3636;&#3656;&#3591;&#3623;&#3656;&#3634;&#3612;&#3641;&#3657;&#3648;&#3621;&#3656;&#3609;&#3607;&#3640;&#3585;&#3588;&#3609;&#3592;&#3632;&#3611;&#3599;&#3636;&#3610;&#3633;&#3605;&#3636;&#3605;&#3634;&#3617;&#3586;&#3657;&#3629;&#3585;&#3635;&#3627;&#3609;&#3604;&#3649;&#3621;&#3632;&#3648;&#3591;&#3639;&#3656;&#3629;&#3609;&#3652;&#3586; &#3648;&#3619;&#3634;&#3652;&#3617;&#3656;&#3629;&#3609;&#3640;&#3597;&#3634;&#3605;&#3651;&#3627;&#3657;&#3626;&#3617;&#3634;&#3594;&#3636;&#3585;&#3607;&#3640;&#3585;&#3607;&#3656;&#3634;&#3609;&#3607;&#3635;&#3585;&#3634;&#3619;&#3607;&#3640;&#3592;&#3619;&#3636;&#3605; &#3585;&#3619;&#3640;&#3603;&#3634;&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3623;&#3656;&#3634;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3607;&#3637;&#3656;&#3588;&#3640;&#3603;&#3585;&#3619;&#3629;&#3585;&#3609;&#3633;&#3657;&#3609;&#3652;&#3604;&#3657;&#3606;&#3641;&#3585;&#3605;&#3657;&#3629;&#3591;&#3649;&#3621;&#3657;&#3623;&#3607;&#3633;&#3657;&#3591;&#3627;&#3617;&#3604; &#3649;&#3621;&#3657;&#3623;&#3607;&#3634;&#3591;&#3648;&#3619;&#3634;&#3592;&#3632;&#3605;&#3619;&#3623;&#3592;&#3626;&#3629;&#3610;&#3629;&#3637;&#3585;&#3588;&#3619;&#3633;&#3657;&#3591;&#3627;&#3609;&#3638;&#3656;&#3591;</h3>
+			<h3>XIN L&#7894;I QU&#221; KH&#193;CH, NH&#7856;M M&#7908;C &#272;&#205;CH C&#212;NG B&#7856;NG CHO T&#7844;T C&#7842; NG&#431;&#7900;I CH&#416;I, M&#7894;I NG&#431;&#7900;I CH&#416;I CH&#7880; &#272;&#431;&#7906;C D&#217;NG 1 M&#195; IP &#272;&#7874; &#272;&#258;NG K&#221; NH&#7852;N C&#431;&#7906;C MI&#7876;N PH&#205; T&#7914; QQ188.COM</h3>
 		</div>
 <?php	}
 	} ?>

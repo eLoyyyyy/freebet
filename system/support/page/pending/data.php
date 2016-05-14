@@ -54,8 +54,9 @@ if($query_1 = sys_mysql_query($conn,$sql_1)){
 }else{
 	echo sys_mysql_error($conn);
 }
-
+/*
 echo json_encode(array( "current" => 1,
 						"rowCount" => 15,
 						"rows" => $row,
-						"total" => $total_account));
+						"total" => $total_account));*/
+echo json_encode($row);

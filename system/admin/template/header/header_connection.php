@@ -22,10 +22,17 @@ if($header_status == 1){
 	<link rel="stylesheet" href="<?php echo $domain . "js/library/bootstrap/bootstrap-3.3.6/css/bootstrap.min.css";?>">
 	<link rel="stylesheet" href="<?php echo $domain;?>css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $domain;?>css/jquery.bootgrid.min.css">
+	<link rel="stylesheet" href="<?php echo $domain . "js/library/bootstrap-table/dist/bootstrap-table.css";?>">
 	<script src="<?php echo $domain . "js/library/jquery/jquery.min.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/bootstrap/bootstrap-3.3.6/js/bootstrap.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/bootgrid/jquery.bootgrid-1.3.1/jquery.bootgrid.min.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/bootgrid/jquery.bootgrid-1.3.1/jquery.bootgrid.fa.min.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/bootstrap-table/dist/bootstrap-table.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/bootstrap-table/dist/extensions/export/bootstrap-table-export.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/tableExport.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/jsPDF/jspdf.min.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/FileSaver/FileSaver.min.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js";?>"></script>
 	<link rel="stylesheet" href="<?php echo $domain;?>css/template.css">
 <?php	
 }

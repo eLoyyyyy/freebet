@@ -8,10 +8,10 @@ $data_1 = '';
 $row = [];
 $total_account = 0;
 $tempRow = [];
-$current = $_POST['current'];
-$rowCount = $_POST['rowCount'];
-$offset = (($current * $rowCount) - $rowCount) == 0 ? 1 : ($current * $rowCount) - $rowCount;
-$searchPhrase = "";
+//$current = $_POST['current'];
+//$rowCount = $_POST['rowCount'];
+//$offset = (($current * $rowCount) - $rowCount) == 0 ? 1 : ($current * $rowCount) - $rowCount;
+//$searchPhrase = "";
 if (isset($_POST['searchPhrase']) && strlen($_POST['searchPhrase'])>0){
 	$search = $_POST['searchPhrase'];
 	$searchPhrase = "AND CONCAT_WS(',',entries_id,user_id,user_name,facebook_url,ip_address,reason_type,app_status,account_id,timestamp) LIKE \'%{$search}%\'";
@@ -84,8 +84,10 @@ if($query_1 = sys_mysql_query($conn,$sql_1)){
 }else{
 	echo sys_mysql_error($conn);
 }
-
+/*
 echo json_encode(array( "current" => $current,
 						"rowCount" => $rowCount,
 						"rows" => $row,
-						"total" => $total_account));
+						"total" => $total_account));*/
+						
+echo json_encode($row);

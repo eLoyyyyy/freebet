@@ -1,4 +1,4 @@
-jQuery("#grid-data-api").on("loaded.rs.jquery.bootgrid", function () {
+jQuery("#grid-data").on("loaded.rs.jquery.bootgrid", function () {
 	jQuery('.command-edit').on('click', function() {
 		onprocess(jQuery(this).attr('data-entries-id'),2);
 	});
@@ -18,6 +18,44 @@ jQuery("#grid-data-api").on("loaded.rs.jquery.bootgrid", function () {
 		},
 	}
 });
+
+var $table = jQuery('#table');
+	jQuery('#toolbar').find('select').change(function () {
+    $table.bootstrapTable('refreshOptions', {
+      exportDataType: jQuery(this).val()
+    });
+  });
+  
+  jQuery('#table').bootstrapTable({
+        showExport: true, 
+		exportTypes: ['excel', 'pdf'],
+		exportOptions: { 
+			fileName: 'testo' , 
+			worksheetName:  'test1' , 
+			ignoreColumn: [0, 9] ,
+			jspdf : {     
+				format: 'a4',
+				autotable : {
+					styles : {  rowHeight : 20,  fontSize : 8 },
+					tableWidth: 'wrap',
+					headerStyles : {  fillColor : 255,  textColor : 0 },
+					alternateRowStyles : {  fillColor : [60, 69, 79],  textColor : 255 }
+				}
+			}
+		}
+    });
+	
+
+        jQuery('#button').click(function () {
+            jQuery('#table').bootstrapTable('refresh');
+        });
+		
+		jQuery('#toolbar').find('select').change(function () {
+            jQuery('#table').bootstrapTable({
+                exportDataType: jQuery(this).val()
+            });
+        });
+
 
 /*function onprocess(entry_id, process){
 

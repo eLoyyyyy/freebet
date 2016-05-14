@@ -7,19 +7,33 @@
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<table id="grid-data" class="table table-condensed table-hover table-striped">
+		<div id="toolbar">
+            <select class="form-control">
+                <option value="">Export Basic</option>
+                <option value="all">Export All</option>
+                <option value="selected">Export Selected</option>
+            </select>
+        </div>
+		<table id="table" 
+				data-toggle="table"
+				data-url="page/rejected/data.php"
+				data-height="750"
+				data-search="true"
+				data-pagination="true"
+				data-toolbar="#toolbar"
+				data-click-to-select="true">
 			<thead>
 				<tr>
-					<th data-column-id="entries_id" data-width="75px" data-type="numeric">NO.ID</th>
-					<th data-width="190px" data-column-id="userid">USER ID</th>
-					<th data-column-id="facebook">FACEBOOK</th>
-					<th data-column-id="name">Name</th>
-					<th data-column-id="ipv4" data-width="150px">IP Address</th>
-					<th data-column-id="cs" data-width="150px">C.S.</th>
-					<th data-column-id="date_submitted" data-width="251px">DATE</th>
-					<th data-column-id="message" >REMARK</th>
-					<th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="100px">Action</th>
-					
+				<th data-field="state" data-checkbox="true"></th>
+					<th data-field="entries_id">NO.ID</th>
+					<th data-field="userid">USER ID</th>
+					<th data-field="facebook">FACEBOOK</th>
+					<th data-field="name">Name</th>
+					<th data-field="ipv4" data-width="150px">IP Address</th>
+					<th data-field="cs" data-width="150px">C.S.</th>
+					<th data-field="date_submitted" data-width="251px">DATE</th>
+					<th data-field="message" >REMARK</th>
+					<th data-field="commands">Action</th>
 				</tr>
 			</thead>
 			<tbody id="body">
