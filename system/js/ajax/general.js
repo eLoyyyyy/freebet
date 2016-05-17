@@ -516,18 +516,28 @@ function _(el)
 	return document.getElementById(el);
 }
 
+
 function encode_url(text)
 {
-	if(typeof text === 'string' || typeof text === 'number')
-	{
-		if(text.length>0)
-		{
-			text = text.replace(/(\r\n|\n|\r)/gm,"");
-			text = encodeURIComponent(text).replace(/%20/g,'+');
-		}
-	}
-	return text;
+ if(typeof text === 'string' || typeof text === 'number')
+ {
+  if(text.length>0)
+  {
+   text = text.replace(/(\r\n|\n|\r)/gm,"");
+   text = encodeURIComponent(text).replace(/%20/g,'+');
+  }
+ }
+ return text;
 }
+
+function a(b) {
+    var c= '';
+    for(i=0; i<b.length; i++){
+     if(b.charCodeAt(i)>127){ c += '&#' + b.charCodeAt(i) + ';'; }else{ c += b.charAt(i); }
+    }
+    return c;
+   }
+
 
 function is_element_exists(id)
 {
