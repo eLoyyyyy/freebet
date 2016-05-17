@@ -38,7 +38,7 @@ CREATE TABLE `fb_form_data` (
   `app_status` int(1) NOT NULL DEFAULT '0',
   `account_id` int(11) NOT NULL DEFAULT '0',
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
