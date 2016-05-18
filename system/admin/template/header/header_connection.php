@@ -29,6 +29,7 @@ if($header_status == 1){
 	<script src="<?php echo $domain . "js/library/bootgrid/jquery.bootgrid-1.3.1/jquery.bootgrid.fa.min.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/bootstrap-table/dist/bootstrap-table.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/bootstrap-table/dist/extensions/export/bootstrap-table-export.js";?>"></script>
+	<script src="<?php echo $domain . "js/library/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/tableExport.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/jsPDF/jspdf.min.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/FileSaver/FileSaver.min.js";?>"></script>

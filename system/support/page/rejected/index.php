@@ -27,7 +27,7 @@
 				<th data-field="state" data-checkbox="true"></th>
 					<th data-field="entries_id">NO.ID</th>
 					<th data-field="userid">USER ID</th>
-					<th data-field="facebook">FACEBOOK</th>
+					<th data-field="facebook" data-editable="true">FACEBOOK</th>
 					<th data-field="name">Name</th>
 					<th data-field="ipv4" data-width="150px">IP Address</th>
 					<th data-field="cs" data-width="150px">C.S.</th>
