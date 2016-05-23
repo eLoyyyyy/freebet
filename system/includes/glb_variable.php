@@ -3,7 +3,7 @@
 *System Connection to url
 *Minified Files
 */
-$system_test = 0;
+$system_test = 1;
 $minified_js = 0;
 $minified_css = 0;
 $header_status = 0;

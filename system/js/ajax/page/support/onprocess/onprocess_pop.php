@@ -30,8 +30,6 @@ if($popType == 1){
 			$content.= "</div>";
 		$content.= "</div>";
 	$content.= "</div>";
-	$message = "1";
-	$messageType = 3;
 }
 else if($popType == 2){
 	$content.= "<div style=\"width:550px;margin:12em auto; max-width:100%;\">";
@@ -44,14 +42,14 @@ else if($popType == 2){
 				$content.= "<div>";
 					$content.= "<select class=\"form-control\" id=\"reject_reason\" onchange=\"changeThis()\" style=\"font-size:16px;height: 37px;\">";
 						$content.= "<option value=\"\">Please Select</option>";
-						$content.= "<option value=\"Salah share gambar\">Salah share gambar</option>";
-						$content.= "<option value=\"Salah share teks promo\">Salah share teks promo</option>";
-						$content.= "<option value=\"Tidak share ke public\">Tidak share ke public</option>";
-						$content.= "<option value=\"Tag tidak sampai 50\">Tag tidak sampai 50</option>";
-						$content.= "<option value=\"Jumlah teman tidak mencukupi\">Jumlah teman tidak mencukupi</option>";
-						$content.= "<option value=\"Link facebook tidak valid\">Link facebook tidak valid</option>";
-						$content.= "<option value=\"Facebook dalam keadaan Private/Lock\">Facebook dalam keadaan Private/Lock</option>";
-						$content.= "<option value=\"Jumlah teman tidak di tampilkan ke public\">Jumlah teman tidak di tampilkan ke public</option>";
+						$content.= "<option value=\"Chia s&#7867; Sai &#7842;nh\">Chia s&#7867; Sai &#7842;nh</option>";
+						$content.= "<option value=\"Chia S&#7867; Sai N&#7897;i Dung Khuy&#7871;n M&#227;i\">Chia S&#7867; Sai N&#7897;i Dung Khuy&#7871;n M&#227;i</option>";
+						$content.= "<option value=\"Ch&#432;a Chia S&#7867; &#7842;nh C&#244;ng Khai\">Ch&#432;a Chia S&#7867; &#7842;nh C&#244;ng Khai</option>";
+						$content.= "<option value=\"Ch&#432;a Tag &#272;&#7911; 50 Ng&#432;&#7901;i\">Ch&#432;a Tag &#272;&#7911; 50 Ng&#432;&#7901;i</option>";
+						$content.= "<option value=\"Số Lượng Bạn Bè Chưa Đủ\">Số Lượng Bạn Bè Chưa Đủ</option>";
+						$content.= "<option value=\"Sai Link Facebook C&#225; Nh&#226;n\">Sai Link Facebook C&#225; Nh&#226;n</option>";
+						$content.= "<option value=\"T&#224;i Kho&#7843;n Facebook &#7902; tr&#7841;ng Th&#225;i Ri&#234;ng T&#432; ho&#7863;c b&#7883; Kh&#243;a\">T&#224;i Kho&#7843;n Facebook &#7902; tr&#7841;ng Th&#225;i Ri&#234;ng T&#432; ho&#7863;c b&#7883; Kh&#243;a</option>";
+						$content.= "<option value=\"Number of Friends didnt show to the Public = Kh&#244;ng Hi&#7875;n Th&#7883; C&#244;ng Khai S&#7889; L&#432;&#7907;ng B&#7841;n B&#232;\">Number of Friends didnt show to the Public = Kh&#244;ng Hi&#7875;n Th&#7883; C&#244;ng Khai S&#7889; L&#432;&#7907;ng B&#7841;n B&#232;</option>";
 						$content.= "<option value=\"others\">Others</option>";
 					$content.= "</select>";
 					$content.= "<div id=\"tblTxtAreaCon\">";
@@ -66,11 +64,9 @@ else if($popType == 2){
 			$content.= "</div>";
 		$content.= "</div>";
 	$content.= "</div>";
-	$message = "2";
-	$messageType = 3;
 }
 else{
-	$message = "Hello";
+	$message = "Error load this modal";
 	$messageType = 2;
 }
 

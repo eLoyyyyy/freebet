@@ -131,25 +131,25 @@
 				<div class="loginmodal-container">
 						<h1>M&#7851;u &#272;&#259;ng K&#253;</h1><br>
 					<!-- <form class="form-horizontal" id="claim-form" method="POST" action="index.php"> action="index.php"-->
-						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-3 control-label">T&#234;n T&#224;i kho&#7843;n</label>
+						<div class="form-group clearfix">
+							<label for="inputEmail3" class="col-sm-3 control-label">T&#234;n &#272;&#259;ng Nh&#7853;p t&#7841;i QQ188</label>
 							<div class="col-sm-9">
-								<input type="text" name="userid" class="form-control input-lg form-reg" id="userid" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="userid" placeholder="T&#234;n T&#224;i kho&#7843;n">
+								<input type="text" name="userid" class="form-control input-lg form-reg" id="userid" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="userid" placeholder="T&#234;n &#272;&#259;ng Nh&#7853;p t&#7841;i QQ188">
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group clearfix">
 							<label for="inputPassword3" class="col-sm-3 control-label">T&#234;n T&#224;i kho&#7843;n Facebook</label>
 							<div class="col-sm-9">
 								<input type="text" name="username" class="form-control input-lg form-reg" id="username" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="username" placeholder="T&#234;n &#273;&#7847;y &#273;&#7911;">
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group clearfix">
 							<label for="inputPassword4" class="col-sm-3 control-label">Link Facebook</label>
 							<div class="col-sm-9">
 								<input type="text" name="facebook_url" class="form-control input-lg form-reg" id="facebook_url" onkeypress="press_enter(event,'registration')" data-required="true" data-required_class_name="field_required" data-maxLength="100" data-minLength="5" data-element="textbox" data-format="text" data-field="facebook_url" placeholder="Link Facebook">
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group clearfix">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button type="submit" class="btn btn-default" id="registration">&#272;&#259;ng nh&#7853;p</button>
 							</div>

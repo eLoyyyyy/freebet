@@ -10,7 +10,7 @@ $total_account = 0;
 $tempRow = [];
 
 $sql_1 = "
-		SELECT
+SELECT
 		fb_fd.entries_id as entries_id,
 		fb_fd.user_id as user_id,
 		fb_fd.user_name as user_name,
@@ -20,25 +20,15 @@ $sql_1 = "
 		fb_fd.app_status as app_status,
 		(SELECT fb_tbl.first_name FROM freebet_tbl_accounts as fb_tbl WHERE fb_tbl.id = fb_fd.account_id) as account_cs,
 		fb_fd.timestamp as timestamp
-		FROM
+FROM
 		fb_form_data as fb_fd
-		WHERE
+WHERE
 		fb_fd.app_status = '1'
 	";
 if($query_1 = sys_mysql_query($conn,$sql_1)){
 	$total_account = sys_mysql_num_rows($query_1);
 	if($total_account>0){
 		while($data_1 = sys_mysql_fetch_assoc($query_1)){
-			/*echo "<tr>";
-				echo "<td>" . $data_1['entries_id'] . "</td>";
-				echo "<td>" . $data_1['user_id'] . "</td>";
-				echo "<td>" . $data_1['facebook_url'] . "</td>";
-				echo "<td>" . $data_1['user_name'] . "</td>";
-				echo "<td>" . $data_1['ip_address'] . "</td>";
-				echo "<td>" . $data_1['timestamp'] . "</td>";
-				echo "<td>" . $data_1['app_status'] . "</td>";
-				echo "<td></td>";
-			echo "</tr>"; */
 			$timestamp = $data_1['timestamp'];
 			$tempRow = array( "entries_id" => $data_1['entries_id'],
 							  "userid" => $data_1['user_id'],
@@ -56,7 +46,4 @@ if($query_1 = sys_mysql_query($conn,$sql_1)){
 	echo sys_mysql_error($conn);
 }
 
-echo json_encode(array( "current" => 1,
-						"rowCount" => 15,
-						"rows" => $row,
-						"total" => $total_account));
+echo json_encode($row);

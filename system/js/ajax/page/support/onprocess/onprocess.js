@@ -1,20 +1,15 @@
-/*var socket = io.connect( 'http://192.168.60.110:3000' );
-socket.on('update_table', function( data ) {
-	jQuery("#grid-data").bootgrid('reload');
-});*/
-
-jQuery("#grid-data").on("loaded.rs.jquery.bootgrid", function () {
+/*jQuery("#grid-data").on("loaded.rs.jquery.bootgrid", function () {
 		jQuery('.command-approve').on('click', function() {
 			approve(jQuery(this).attr('data-entries-id'), 1);
-			/*socket.emit('update_table', { 
-				update: "TRUE"
-			});*/
 		});
 }).bootgrid({
 	ajax: true,
 	url: "page/onprocess/data.php",
 	navigation: 0,
 	rowCount: -1,
+	labels: {
+		noResults: "Kh&#244;ng c&#243; k&#7871;t qu&#7843; n&#224;o!"
+	},
 	formatters: {
 		"link": function(column, row){
 
@@ -26,33 +21,62 @@ jQuery("#grid-data").on("loaded.rs.jquery.bootgrid", function () {
 					"<button type=\"button\" class=\"btn btn-xs btn-default command-reject\" data-entries-id=\"" + row.entries_id + "\" data-toggle=\"modal\" data-target=\"#bryan\" onclick=\"showInfo('3','1','" + row.entries_id + "')\"><span class=\"fa fa-trash fa-2x\"></span></button> ";
 		},
 	}
+});*/
+var jqtable = jq('#table');
+	jq('#toolbar').find('select').change(function () {
+});
+var refreshT = function(){jqtable.bootstrapTable('refresh');}
+jq('#table').bootstrapTable({
+	showExport: true, 
+	exportDataType: "all",
+	exportTypes: ['excel', 'pdf'],
+	exportOptions: { 
+		fileName: 'data' , 
+		worksheetName:  'export' , 
+		ignoreColumn: [0, 9] ,
+		jspdf : {     
+			format: 'a4',
+			autotable : {
+				styles : {  rowHeight : 20,  fontSize : 8 },
+				tableWidth: 'wrap',
+				headerStyles : {  fillColor : 255,  textColor : 0 },
+				alternateRowStyles : {  fillColor : [60, 69, 79],  textColor : 255 }
+			}
+		}
+	}
+});
+	
+jq('#button').click(function () {
+	jq('#table').bootstrapTable('refresh');
 });
 
-	
-/*function approve(entry_id, process){
-	
-	//*	process = [0 - pending,1 - approve,2 - on-process,3 - reject]
-	
-	
-	var dataArray = {
-		'process': process,
-		'entry_id': entry_id
-	};
-	
-	jq.ajax({
-		url: "../js/ajax/page/support/onprocess/onprocess.php",
-		type: "POST",
-		data: dataArray
-	}).done(function (response, textStatus, jqXHR){
-		// show successfully for submit message
-		console.log(response);
-		window.location.reload();
-	}).fail(function (){
-	   // show error
-		alert('fail');
+jq('#toolbar').find('select').change(function () {
+	jq('#table').bootstrapTable({
+		exportDataType: jq(this).val()
 	});
-	
-}*/
+});
+
+function actionFormatter(value, row, index) {
+    return [
+        '<div class="text-center"><button class="check btn btn-default" title="check">',
+			'<i class="fa fa-check fa-lg"></i>',
+        '</button>',
+		'<button class="trash btn btn-default" title="trash" style="margin-left:5px;">',
+			'<i class="fa fa-trash fa-lg"></i>',
+        '</button></div>'
+    ].join('');
+}
+window.actionEvents = {
+    'click .check': function (e, value, row, index) {
+		approve(row.entries_id,1);
+    },
+    'click .trash': function (e, value, row, index) {
+		showInfo(3,1,row.entries_id);
+    }
+};
+
+
+
 
 var xmlhttp_showInfo;
 var showInfo = function(popStatus,popType,popId){
@@ -89,7 +113,7 @@ var showInfo = function(popStatus,popType,popId){
 }
 
 var xmlhttp_approve;
-function approve(entry_id, process){
+function approve(entry_id,process){
 		
 	if(window.XMLHttpRequest){
 		xmlhttp_approve = new XMLHttpRequest();
@@ -105,7 +129,7 @@ function approve(entry_id, process){
 			
 			if(jsonResponse.message.length>0){
 				systemNotify(jsonResponse.message,jsonResponse.messageType,true);
-				jQuery("#grid-data").bootgrid('reload');
+				refreshT();
 			}
 			messageHide();	
 		}
@@ -126,6 +150,24 @@ var changeThis = function(){
 		jq('#tblTxtAreaCon').hide();
 	}
 }
+
+var encode = function(uniString) 
+{
+	if (encodeURIComponent) {
+	    uniString= encodeURIComponent(uniString);
+	} else {
+	    uniString= escape(uniString);
+	}
+	return uniString;
+}
+function unicode2htmldec(b) {
+	var c= '';
+	for(i=0; i<b.length; i++){
+	 if(b.charCodeAt(i)>127){ c += '&#' + b.charCodeAt(i) + ';'; }else{ c += b.charAt(i); }
+	}
+	return  c;
+}
+
 /*Submit Reject Start*/
 var xmlhttp_submitReject;
 var submitReject = function(process,entry_id){
@@ -136,6 +178,8 @@ var submitReject = function(process,entry_id){
 	}else{
 		tblTxtArea = _('tblTxtArea').value = "";
 	}
+	tblTxtArea =  unicode2htmldec(tblTxtArea);
+	reject_reason =  unicode2htmldec(reject_reason);
 	
 	if(window.XMLHttpRequest){
 		xmlhttp_submitReject = new XMLHttpRequest();
@@ -148,18 +192,16 @@ var submitReject = function(process,entry_id){
 	var dataSubmit = "";
 	dataSubmit += "entry_id=" + entry_id;
 	dataSubmit += "&process=" + process;
-	dataSubmit += "&reject_reason=" + reject_reason;
-	dataSubmit += "&tblTxtArea=" + tblTxtArea;
+	dataSubmit += "&reject_reason=" + encode(reject_reason);
+	dataSubmit += "&tblTxtArea=" + encode(tblTxtArea);
 	
-	messageShow('Please Wait');
 	xmlhttp_submitReject.onreadystatechange = function(){
 		if(xmlhttp_submitReject.readyState == 4 && xmlhttp_submitReject.status == 200){
 			var jsonResponse = xmlhttp_submitReject.responseText;
 			jsonResponse = eval('(' + jsonResponse + ')');
-			
 			if(jsonResponse.message.length>0){
 				systemNotify(jsonResponse.message,jsonResponse.messageType,true);
-				jQuery("#grid-data").bootgrid('reload');
+				refreshT();
 			}
 			messageHide();
 			formHide2();

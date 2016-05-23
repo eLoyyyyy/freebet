@@ -10,6 +10,7 @@ $message = '';
 $messageType = '';
 $redirect = '';
 $save_session_status = 0;
+$web_type = 'QQ188';
 
 if(isset($_POST['freebet_email']) && strlen($_POST['freebet_email'])>0){$email_address = $_POST['freebet_email'];}else{$email_address = '';}
 if(isset($_POST['password_id']) && strlen($_POST['password_id'])>0){$password = $_POST['password_id'];}else{$password = '';}

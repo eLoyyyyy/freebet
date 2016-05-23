@@ -13,15 +13,17 @@ if($system_test_connection == 1){
 }
 else{
 	/*Live Mode*/
-	$db_host = "";
-	$db_name = "";
-	$db_user = "";
-	$db_pass = "";
+	$db_host = "localhost";
+	$db_name = "freetqq1_wp598";
+	$db_user = "freetqq1_wp598";
+	$db_pass = "Rb8)]6Pn4S";
 }
 /*Database End Connection*/
 
 $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die(mysqli_connect_error());
-//$conn = mysql_connect($db_host, $db_username, $db_password,$db_name) or die("Connecting to MySQL failed");
+//$conn = mysql_connect($db_host, $db_user, $db_pass,$db_name) or die("Connecting to MySQL failed");
+
+/*mysqli_set_charset($conn,"utf8");*/
 
 function sys_mysql_fetch_fields($data){return mysqli_fetch_field($data);}
 //function sys_mysql_fetch_fields($data){return mysql_num_fields($data);}
@@ -49,4 +51,3 @@ function sys_mysql_num_rows($data){return mysqli_num_rows($data);}
 
 function sys_mysql_affected_rows($conn){return mysqli_affected_rows($conn);}
 //function sys_mysql_affected_rows($conn){return mysql_affected_rows();}
-?>

@@ -16,7 +16,9 @@ if($header_status == 1){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bootgrid/1.3.1/jquery.bootgrid.fa.min.js"></script>
-
+<!--Editable Bootgrid-->
+<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 <?php
 }else{
 ?>
@@ -36,8 +38,8 @@ if($header_status == 1){
 	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/FileSaver/FileSaver.min.js";?>"></script>
 	<script src="<?php echo $domain . "js/library/tableExport.jquery.plugin/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js";?>"></script>
 	<link rel="stylesheet" href="<?php echo $domain;?>css/template.css">
-	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<link rel="stylesheet" href="<?php echo $domain;?>css/bootstrap-editable.css">
+	<script src="<?php echo $domain . "js/library/bootstrap-editable/bootstrap-editable.min.js";?>"></script>
 <?php	
 }
 if($account_type > 0)

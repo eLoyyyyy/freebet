@@ -43,28 +43,28 @@ if(isset($account_id))
 					// Pending
 					$selected = "";
 					$page_url = 'pending';
-					$page_url_label = 'Pending';
+					$page_url_label = 'Ch&#7901; x&#7917; l&#253;';
 					if($page == $page_url){$selected = ' class="active"';}
 					echo '<li' . $selected . '><a href="' . $domain . $linkSiteName . '?page=' . $page_url . '"><i class="menu-icon fa fa-flag-o"></i><span class="mm-text mmc-dropdown-delay">' . $page_url_label . '</span></a></li>';
 					
 					// On Process
 					$selected = "";
 					$page_url = 'onprocess';
-					$page_url_label = 'On-Process';
+					$page_url_label = '&#272;ang ki&#7875;m tra';
 					if($page == $page_url){$selected = ' class="active"';}
 					echo '<li' . $selected . '><a href="' . $domain . $linkSiteName . '?page=' . $page_url . '"><i class="menu-icon fa fa-refresh"></i><span class="mm-text mmc-dropdown-delay">' . $page_url_label . '</span></a></li>';
 					
 					// Approved
 					$selected = "";
 					$page_url = 'approved';
-					$page_url_label = 'Approved';
+					$page_url_label = '&#272;&#7891;ng &#253;';
 					if($page == $page_url){$selected = ' class="active"';}
 					echo '<li' . $selected . '><a href="' . $domain . $linkSiteName . '?page=' . $page_url . '"><i class="menu-icon fa fa-check"></i><span class="mm-text mmc-dropdown-delay">' . $page_url_label . '</span></a></li>';
 					
 					// Rejected
 					$selected = "";
 					$page_url = 'rejected';
-					$page_url_label = 'Rejected';
+					$page_url_label = 'T&#7915; ch&#7889;i';
 					if($page == $page_url){$selected = ' class="active"';}
 					echo '<li' . $selected . '><a href="' . $domain . $linkSiteName . '?page=' . $page_url . '"><i class="menu-icon fa fa-trash"></i><span class="mm-text mmc-dropdown-delay">' . $page_url_label . '</span></a></li>';
 				}	
